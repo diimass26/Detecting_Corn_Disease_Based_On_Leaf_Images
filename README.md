@@ -35,16 +35,16 @@
 - `app.py`: File utama yang berisi kode untuk menjalankan website streamlit.
 
 ## Installation
-1. Clone the repository to your local machine.
-2. Install the required dependencies using 
+1. Clone repositori github ini ke local computer anda .
+2. Install depedencies dengan menjalankan code berikut : 
 ```
 pip install -r requirements.txt
 ```
-3. Run the `app.py` file to start the streamlit app.
+3. Eksekusi file `app.py` untuk memulai website dengan code berikut:
 ```
 streamlit run app.py
 ```
 
 ## Usage
-1. Open the streamlit app in your web browser.
-2. Upload an image of a corn leaf.
+1. Buka streamlit website yang sudah dijalankan.
+2. Mengunggah foto daun tanaman jagung yang terindikasi penyakit.
