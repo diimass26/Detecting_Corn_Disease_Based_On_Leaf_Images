@@ -1,0 +1,50 @@
+<p align="center">
+  <a href="" rel="noopener">
+ <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40537-024-00972-z/MediaObjects/40537_2024_972_Fig12_HTML.png" alt="Project Thumbnail"></a>
+</p>
+<h3 align="center">Corn Disease Detection Based on Leaf Images</h3>
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
+<img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white">
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white">
+<img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white">
+<img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
+<img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
+<img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white">
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white">
+</div>
+
+---
+
+<p align="center"> Selamat datang di repositori ini! Proyek ini menggunakan machine learning untuk mendeteksi penyakit pada tanaman jagung berdasarkan gambar daunnya. Tujuannya adalah untuk membantu petani mengidentifikasi penyakit sejak dini dan membantu petani mengambil tindakan untuk meminimalisir kerugian yang disebabkan oleh penyakit pada tanaman jagung.</p>
+    <br> 
+</p>
+
+## Features
+- Image classification: Menggunakan algoritma Convolutional Neural Network (CNN) untuk mengklasifikasikan penyakit tanaman jagung berdasarkan gambar daunnya.
+- Model deployment: Menggunakan streamlit untuk membuat website sederhana(app.py) untuk menjalankan dan menguji model yang sudah dibuat.
+
+## Files
+- `corn_disease` : Folder yang menyimpan dataset yang belum dilakukan augmentasi khusus pada class gray leaf spot.
+- `corn_disease2` : Folder yang menyimpan dataset yang sudah dilakukan augmentasi khusus pada class gray leaf spot.
+- `requirements.txt` : File yang berisi daftar dependencies yang diperlukan untuk menjalankan proyek ini.
+- `corn_disease_detection.ipynb`: File jupyter notebook yang berisi kode untuk melakukan preprocessing data, membuat visualisasi, dan melatih model.
+- `model.h5`: File model yang telah dilatih dan disimpan dalam format h5.
+- `app.py`: File utama yang berisi kode untuk menjalankan website streamlit.
+
+## Installation
+1. Clone the repository to your local machine.
+2. Install the required dependencies using 
+```
+pip install -r requirements.txt
+```
+3. Run the `app.py` file to start the streamlit app.
+```
+streamlit run app.py
+```
+
+## Usage
+1. Open the streamlit app in your web browser.
+2. Upload an image of a corn leaf.
