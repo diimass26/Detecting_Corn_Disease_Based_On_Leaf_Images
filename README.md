@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40537-024-00972-z/MediaObjects/40537_2024_972_Fig12_HTML.png" alt="Project Thumbnail"></a>
+ <img src="test_predict.png" alt="Project Thumbnail"></a>
 </p>
 <h3 align="center">Corn Disease Detection Based on Leaf Images</h3>
 
