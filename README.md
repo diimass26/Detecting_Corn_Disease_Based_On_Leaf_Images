@@ -13,38 +13,51 @@
 <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
 <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
 <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white">
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white">
+<img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
+<img src="  https://img.shields.io/badge/IBM%20Cloud-1261FE?style=for-the-badge&logo=IBM%20Cloud&logoColor=white">
 </div>
 
 ---
 
-<p align="center"> Selamat datang di repositori ini! Proyek ini menggunakan machine learning untuk mendeteksi penyakit pada tanaman jagung berdasarkan gambar daunnya. Tujuannya adalah untuk membantu petani mengidentifikasi penyakit sejak dini dan membantu petani mengambil tindakan untuk meminimalisir kerugian yang disebabkan oleh penyakit pada tanaman jagung.</p>
+<p align="center"> Selamat datang! Proyek ini menggunakan machine learning untuk mendeteksi penyakit pada tanaman jagung berdasarkan gambar daunnya. Tujuannya adalah untuk membantu petani mengidentifikasi penyakit sejak dini dan membantu petani mengambil tindakan untuk meminimalisir kerugian yang disebabkan oleh penyakit pada tanaman jagung.</p>
     <br> 
 </p>
 
+## Dataset
+Dataset yang digunakan dalam proyek ini adalah dataset yang telah diambil dari Kaggle. Berikut adalah link datasetnya :
+ https://www.kaggle.com/datasets/smaranjitghose/corn-or-maize-leaf-disease-dataset
+
+Sebelum digunakan dataset dibersihkan terlebih dahulu seperti menghapus beberapa gambar yang buram. Sehingga didapatlah dataset seperti berikut:
+- Common Rust - 813 images
+- Gray Leaf Spot - 409 images
+- Blight -928 images
+- Healthy - 1162 images
+
+
 ## Features
-- Image classification: Menggunakan algoritma Convolutional Neural Network (CNN) untuk mengklasifikasikan penyakit tanaman jagung berdasarkan gambar daunnya.
-- Model deployment: Menggunakan streamlit untuk membuat website sederhana(app.py) untuk menjalankan dan menguji model yang sudah dibuat.
+- Image classification: Menggunakan algoritma Convolutional Neural Network (CNN) dengan arsitektur MobileNetV2 untuk mengklasifikasikan penyakit tanaman jagung berdasarkan gambar daunnya.
+- Model deployment: Model ini di-deploy melalui backend Flask yang dikemas dalam Docker kemudian di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit.
 
 ## Files
+- `backend` : Folder yang berisi kode backend yang menggunakan Flask untuk mendefinisikan endpoint API (sudah dilakukan deployment pada IBM Cloud Code Engine).
 - `corn_disease` : Folder yang menyimpan dataset yang belum dilakukan augmentasi khusus pada class gray leaf spot.
-- `corn_disease2` : Folder yang menyimpan dataset yang sudah dilakukan augmentasi khusus pada class gray leaf spot.
+- `balanced_corn_disease` : Folder yang menyimpan dataset yang sudah dilakukan augmentasi khusus pada class gray leaf spot.
+- `split_corn_disease` : Folder yang menyimpan dataset yang sudah dilakukan splitting data menjadi 80% train, 10% val, dan 10% test.
+- `split_corn_disease_augmented` : Folder yang menyimpan dataset yang sudah dilakukan augmentasi pada data training.
+- `saved_model`: Folder yang menyimpan model yang telah dilatih dan disimpan dalam format h5.
 - `requirements.txt` : File yang berisi daftar dependencies yang diperlukan untuk menjalankan proyek ini.
 - `corn_disease_detection.ipynb`: File jupyter notebook yang berisi kode untuk melakukan preprocessing data, membuat visualisasi, dan melatih model.
-- `model.h5`: File model yang telah dilatih dan disimpan dalam format h5.
-- `app.py`: File utama yang berisi kode untuk menjalankan website streamlit.
 
-## Installation
-1. Clone repositori github ini ke local computer anda .
-2. Install depedencies dengan menjalankan code berikut : 
-```
-pip install -r requirements.txt
-```
-3. Eksekusi file `app.py` untuk memulai website dengan code berikut:
-```
-streamlit run app.py
-```
 
-## Usage
-1. Buka streamlit website yang sudah dijalankan.
-2. Mengunggah foto daun tanaman jagung yang terindikasi penyakit.
+## Model Evaluation
+Kami melakukan evaluasi model menggunakan Confusion Matrix dan F1-Score. Model deteksi penyakit tanaman jagung berbasis CNN MobileNetV2 memiliki akurasi 94%. Model ini dirancang untuk mengklasifikasikan empat kelas penyakit: Blight, Common Rust, Gray Leaf Spot, dan Healthy.
+- Confusion Matrix:
+<img src="confusion_matrix.png" alt="Confusion Matrix">
+
+- F1-Score:
+<img src="f1_score.png" alt="F1-Score">
+
+Model CNN dengan arsitektur MobileNetV2 bekerja sangat baik dengan akurasi 94%, khususnya dalam mengklasifikasikan kelas Common Rust dan Healthy dengan akurasi tinggi. Namun, terdapat sedikit kebingungan antara Blight dan Gray Leaf Spot, yang dapat diperbaiki dengan peningkatan kualitas dataset atau augmentasi data.
+
+## Deployment
+Model ini telah di-deploy melalui backend Flask yang dikemas dalam Docker. Model ini di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit.
