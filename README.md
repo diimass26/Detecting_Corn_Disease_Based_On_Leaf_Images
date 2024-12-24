@@ -60,4 +60,6 @@ Kami melakukan evaluasi model menggunakan Confusion Matrix dan F1-Score. Model d
 Model CNN dengan arsitektur MobileNetV2 bekerja sangat baik dengan akurasi 94%, khususnya dalam mengklasifikasikan kelas Common Rust dan Healthy dengan akurasi tinggi. Namun, terdapat sedikit kebingungan antara Blight dan Gray Leaf Spot, yang dapat diperbaiki dengan peningkatan kualitas dataset atau augmentasi data.
 
 ## Deployment
-Model ini telah di-deploy melalui backend Flask yang dikemas dalam Docker. Model ini di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit. Anda bisa mencoba AI ini melalui fitur deteksi penyakit pada link website berikut : https://smartconweb.my.id/
+Model ini telah di-deploy melalui backend Flask yang dikemas dalam Docker. Model ini di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit. 
+
+Anda bisa mencoba AI ini melalui fitur deteksi penyakit pada link website berikut : https://smartconweb.my.id/
