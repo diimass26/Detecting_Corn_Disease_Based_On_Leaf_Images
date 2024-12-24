@@ -61,5 +61,3 @@ Model CNN dengan arsitektur MobileNetV2 bekerja sangat baik dengan akurasi 94%, 
 
 ## Deployment
 Model ini telah di-deploy melalui backend Flask yang dikemas dalam Docker. Model ini di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit. 
-
-Anda bisa mencoba AI ini melalui fitur deteksi penyakit pada link website berikut : https://smartconweb.my.id/
