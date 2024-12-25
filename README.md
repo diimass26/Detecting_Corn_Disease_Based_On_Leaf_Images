@@ -14,7 +14,8 @@
 <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
 <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white">
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white">
-<img src="  https://img.shields.io/badge/IBM%20Cloud-1261FE?style=for-the-badge&logo=IBM%20Cloud&logoColor=white">
+<img src="https://img.shields.io/badge/IBM%20Cloud-1261FE?style=for-the-badge&logo=IBM%20Cloud&logoColor=white">
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white">
 </div>
 
 ---
@@ -61,3 +62,35 @@ Model CNN dengan arsitektur MobileNetV2 bekerja sangat baik dengan akurasi 94%, 
 
 ## Deployment
 Model ini telah di-deploy melalui backend Flask yang dikemas dalam Docker. Model ini di-deploy menggunakan IBM Cloud Code Engine, sehingga dapat diakses real-time melalui endpoint publik untuk menerima input gambar daun dan memberikan hasil prediksi penyakit. 
+
+## Running the Streamlit App
+
+Untuk menjalankan aplikasi berbasis Streamlit untuk deteksi penyakit jagung, ikuti langkah-langkah berikut:
+
+1. **Clone Repository**:
+    ```bash
+    git clone <repository_url>
+    cd <repository_name>
+    ```
+
+2. **Install Dependencies**:
+    Pastikan Anda memiliki Python terinstal di komputer Anda. Kemudian, instal semua dependencies yang tercantum di `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run Streamlit App**:
+    Jalankan perintah berikut untuk memulai aplikasi Streamlit:
+    ```bash
+    streamlit run app.py
+    ```
+
+4. **Open in Browser**:
+    Aplikasi akan terbuka secara otomatis di browser Anda. Jika tidak, buka URL yang diberikan di terminal.
+
+5. **Upload Image**:
+    Unggah gambar daun jagung melalui antarmuka aplikasi untuk mendapatkan hasil prediksi penyakit beserta tingkat kepercayaannya.
+
+---
+
+AI ini juga sudah terintegrasi pada link website berikut : https://smartconweb.my.id/
